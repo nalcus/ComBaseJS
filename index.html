@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <meta name="robots" content="noindex, nofollow">
+  <title>ComBaseJS | Nicholas Alcus | nalcus@gmail.com</title>
+
+</head>
+<body>
+  <header>
+    <h1>ComBaseJS</h1>
+  </header>
+  <main>
+    This program is about complemetary base pairs of DNA.
+
+  </main>
+  <footer>
+    nalcus@gmail.com
+  </footer>
+  <script>
+  var ingene=prompt("Please enter the nucleotide bases you'd like to complement. \nYour input should only include the letters A, C, G, or T");
+  var outgene="";
+  var badbase=false;
+  for (var i=0;i<ingene.length;i++) {
+    switch(ingene.substring(i,i+1).toLowerCase()) {
+      case 'a':
+        outgene+="T";
+        break;
+      case 't':
+        outgene+="A";
+        break;
+      case 'u':
+        outgene+="A";
+        break;
+      case 'g':
+        outgene+="C";
+        break;
+      case 'c':
+        outgene+="G";
+        break;
+      default:
+        badbase=true;
+    }
+  }
+  if (badbase) {
+    alert("Unknown bases were entered!");
+  } else {
+    alert("Your complemetary strand is: "+outgene);
+  }
+  </script>
+</body>
+</html>
